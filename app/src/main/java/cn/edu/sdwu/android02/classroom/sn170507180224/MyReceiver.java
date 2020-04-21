@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 public class MyReceiver extends BroadcastReceiver {
 
+
     @Override
     public void onReceive(Context context, Intent intent) {
         //接收广播时自动调用
