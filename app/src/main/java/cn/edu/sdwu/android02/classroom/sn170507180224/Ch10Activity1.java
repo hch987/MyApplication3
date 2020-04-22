@@ -1,14 +1,14 @@
 ﻿package cn.edu.sdwu.android02.classroom.sn170507180224;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-
-import cn.edu.sdwu.android02.classroom.sn170507180224.R;
+import android.widget.TextView;
 
 public class Ch10Activity1 extends AppCompatActivity {
-    private  Integer count;//点击按键的计数器
+private  Integer count;//点击按键的计数器
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -16,12 +16,18 @@ public class Ch10Activity1 extends AppCompatActivity {
         setContentView(R.layout.layout_ch10_1);
         Log.i(Ch10Activity1.class.toString(),"onCreate");
         count=0;
+
+        //接收数据
+        Intent intent=getIntent();//获取界面跳转时获取的intent
+        String text=intent.getStringExtra("text");
+        TextView textView=(TextView)findViewById(R.id.ch10_1_tv);
+        textView.setText(text);
     }
 
 
 
     public  void finishClick(View view){
-        finish();//关闭界面
+    finish();//关闭界面
     }
     @Override
     protected void onStart() {
@@ -29,7 +35,7 @@ public class Ch10Activity1 extends AppCompatActivity {
         Log.i(Ch10Activity1.class.toString(),"onStart");
     }
 
-    //计数的方法
+//计数的方法
     public  void  counter(View view){
         count++;
         Log.i(Ch10Activity1.class.toString(),"counter:"+count);
@@ -53,7 +59,7 @@ public class Ch10Activity1 extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(Ch10Activity1.class.toString(),"onDestroy");
+         Log.i(Ch10Activity1.class.toString(),"onDestroy");
     }
 
     @Override
@@ -80,3 +86,4 @@ public class Ch10Activity1 extends AppCompatActivity {
         Log.i(Ch10Activity1.class.toString(),"onRestart");
     }
 }
+
