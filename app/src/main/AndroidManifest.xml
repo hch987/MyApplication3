@@ -29,7 +29,18 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Ch10Activity3"></activity>
+        <activity android:name=".Ch10Activity3" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyService2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Ch12Activity1"></activity>
     </application>
 
 </manifest>
