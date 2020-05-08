@@ -46,8 +46,6 @@ public class Ch12Activity1 extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         unbindService(serviceConnection);
-
-
     }
 
     public void start_service(View view){
@@ -65,7 +63,5 @@ public class Ch12Activity1 extends AppCompatActivity {
             int ran=myService2.genRandom();
             Toast.makeText(this,ran+"",Toast.LENGTH_LONG).show();
         }
-
-
     }
 }

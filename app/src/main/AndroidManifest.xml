@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.edu.sdwu.android02.classroom.sn170507180224">
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,7 +41,18 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Ch12Activity1"></activity>
+        <activity android:name=".Ch12Activity1" />
+        <activity android:name=".Ch12Activity2" />
+        <activity android:name=".Ch13Activity1" />
+        <activity android:name=".Ch14Activity1" />
+        <activity android:name=".Ch15Activity1" />
+        <activity android:name=".Ch16Activity1" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="uri"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>
