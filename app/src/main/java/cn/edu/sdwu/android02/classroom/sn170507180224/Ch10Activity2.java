@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 public class Ch10Activity2 extends AppCompatActivity {
 
     @Override
